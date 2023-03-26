@@ -1,0 +1,28 @@
+﻿<UserControl x:Class="VýukovýProgram.UserControlVyjmenovanáSlova"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:VýukovýProgram"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid Background="Cyan" Width="800" Height="450">
+        <Rectangle Fill="#FF00B8B8" HorizontalAlignment="Left" Height="130" Margin="10,10,0,0" Stroke="Black" VerticalAlignment="Top" Width="190"/>
+        <Label Content="Životy:" HorizontalAlignment="Left" Height="65" Margin="10,10,0,0" VerticalAlignment="Top" Width="190" FontWeight="Bold" FontSize="36" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+        <Rectangle Fill="#0000B8B8" HorizontalAlignment="Left" Height="65" Margin="10,75,0,0" Stroke="Black" VerticalAlignment="Top" Width="190"/>
+        <Rectangle x:Name="rctŽivot1" Fill="Red" HorizontalAlignment="Left" Height="45" Margin="20,85,0,0" Stroke="Black" VerticalAlignment="Top" Width="50"/>
+        <Rectangle x:Name="rctŽivot2" Fill="Red" HorizontalAlignment="Left" Height="45" Margin="80,85,0,0" Stroke="Black" VerticalAlignment="Top" Width="50"/>
+        <Rectangle x:Name="rctŽivot3" Fill="Red" HorizontalAlignment="Left" Height="45" Margin="140,85,0,0" Stroke="Black" VerticalAlignment="Top" Width="50"/>
+        <Button x:Name="btnEnd" Content="Ukončit" HorizontalAlignment="Center" VerticalAlignment="Top" Width="200" Margin="0,20,0,0" Height="80" FontSize="36" FontWeight="Bold" Background="Red" Cursor="Hand" Click="btnEnd_Click"/>
+        <Rectangle Fill="#FF00B8B8" HorizontalAlignment="Left" Height="130" Margin="590,10,0,0" Stroke="Black" VerticalAlignment="Top" Width="200"/>
+        <Rectangle Fill="#FF00B8B8" HorizontalAlignment="Left" Height="65" Margin="590,75,0,0" Stroke="Black" VerticalAlignment="Top" Width="200"/>
+        <Label Content="Skóre:" HorizontalAlignment="Left" Height="65" Margin="590,10,0,0" VerticalAlignment="Top" Width="200" FontSize="36" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontWeight="Bold"/>
+        <Label Content="{Binding Skóre, Mode=TwoWay}" HorizontalAlignment="Left" Height="65" Margin="590,75,0,0" VerticalAlignment="Top" Width="200" FontSize="36" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontWeight="Bold"/>
+        <Rectangle Fill="#FF00B8B8" HorizontalAlignment="Center" Height="100" Stroke="Black" VerticalAlignment="Top" Width="400" Margin="0,225,0,0"/>
+        <Border Height="100" Width="400" Margin="200,225,200,125">
+            <TextBlock x:Name="textBlock" HorizontalAlignment="Center" Margin="0,0,0,0" TextWrapping="Wrap" Text="{Binding Otázka, Mode=TwoWay}" VerticalAlignment="Center" Width="400" FontSize="36" FontWeight="Bold" ScrollViewer.VerticalScrollBarVisibility="Disabled" TextAlignment="Center"/>
+        </Border>
+        <Button x:Name="btnI" Content="i" HorizontalAlignment="Left" VerticalAlignment="Top" Width="80" Margin="10,360,0,0" Height="80" FontSize="36" FontWeight="Bold" Background="Orange" Cursor="Hand" Click="btnOdpověď_Click"/>
+        <Button x:Name="btnY" Content="y" HorizontalAlignment="Left" VerticalAlignment="Top" Width="80" Margin="710,360,0,0" Height="80" FontSize="36" FontWeight="Bold" Background="GreenYellow" Cursor="Hand" Click="btnOdpověď_Click"/>
+    </Grid>
+</UserControl>
